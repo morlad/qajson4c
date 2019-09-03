@@ -74,11 +74,7 @@
 #define QAJ4C_MEMMOVE memmove
 #define QAJ4C_MEMCPY memcpy
 
-#ifndef _WIN32
 #define QAJ4C_SNPRINTF snprintf
-#else
-#define QAJ4C_SNPRINTF __mingw_snprintf
-#endif
 
 #if defined(_WIN64) || (defined(__WORDSIZE) && __WORDSIZE == 64)
 #define QAJ4C_ALIGN __attribute__((packed, aligned(8)))
